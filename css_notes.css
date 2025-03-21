@@ -1,0 +1,329 @@
+/**********************************************************/
+/*****************      Css selectors       ***************/
+/**********************************************************/
+/*
+  - * => بيحدد كل العناصر
+  - Elemnt otherElemnt => div div تارجت اي ديف جوه ديف 
+  - .class-name => تارجت اي عنصر ليه نفس اسم الكلاس
+  - #id-name => id تارجت اي عنصر ليه نفس اسم 
+  - .parent .chiled => تارجت الابن الي جوه الاب 
+  - .parent > .chiled => Direct chiled
+  - .parent.chiled => [class="parent chiled"] تارجت ايلمنت ليه الكلاسين مع بعض 
+  - .class-name div => تارجت اي ديف جوه الكلاس ده
+  - div.class-name => تارجت الديف الي ليها نفس الكلاس
+  - div + p => تارجت اي باراجراف قبلها ديف
+  - p ~ div => تارجت اي ديف قبها براجراف موجودين في نفس الاب
+  - div[title] => [<div title="">] تارجت العنصر الي ليه نفس الاتريبيوت جوه نفس الديف 
+  - [Atteribute ~= Value] => تارجت الايلمنت الي بيحتوي ع الكلمه دي
+  - [Atteribute *= Value] => تارجت الايلمنت الي بيحتوي ع جمله فيها الكلمه دي
+  - [Atteribute ^= Value] => تارجت الايلمنت الي بيبدأ ب الكلمه دي
+  - p:first-child => تارجت اول براجراف في الاب بس و لازم يكون اول عنصر مفيش حاجه فوقه
+  - p:last-child => تارجت اخر براجراف في الاب بس و لازم يكون اخر عنصر مفيش حاجه تحته
+  - p:first-of-type => تارجت اول باراجراف مهما كان مكانه فين
+  - p:last-of-type => تارجت اخر باراجراف مهما كان مكانه فين
+  - p:only-child => تارجت العنصر الوحيد في الاب
+  - p:only-of-type => تارجت العنصر الوحيد من نوعه في الاب
+  - p:not(:first-child) => تارجت كل العناصر  معدا السيلكتور ده 
+  - p:nth-child(n) => تارجت العنصر رقم n في الاب
+  - p:nth-last-child(n) => تارجت العنصر رقم n من اخر الاب
+  - p:nth-of-type(n) => تارجت العنصر رقم n من نوعه في الاب
+  - p:nth-last-of-type(n) => تارجت العنصر رقم n من نوعه في الاب من اخره
+  - p:empty => تارجت العنصر الفاضي
+  - :root => بتحط فيه الالوان و الابعاد الي بتستخدم كتير في الصفحه
+  - :checked => في ال check box
+  - :disabled => في ال input
+  - :empty => في العناصر الفاضيه
+  - :required => في ال input
+  - :focus => في ال input
+  - ::selection => تغيير لون النص الي بيتحدد
+  - ::placeholder => تغيير لون النص الي في البليسهولدر
+*/
+
+
+
+div {
+  /* background style */
+  color: rgb(0, 0, 0); /* لون النص */
+  background-color: #40096b3f; /* لون الخلفية */ 
+  background-image: url(../);
+  background-repeat: no-repeat; /* لو عايز الصورة تتكرر  */
+  background-attachment: scroll; /* لو عايز الصورة تبقي تتحرك مع السكرل */
+  background-position: left; /* لو عايز تحديد مكان الصورة */
+  background-size: 20px; /* لو عايز تغير حجم الصورة */
+
+  /****************************************/
+  padding: 20px; /* المسافة بين النص والحواف */
+  margin-left: auto; /* المسافة بين العنصر والحواف */
+  margin-right: auto; /* المسافة بين العنصر والحواف */
+  width: 70%; /* العرض */
+
+  /****************************************/
+  border-width: 2px; /* حجم الحواف */
+  border-radius: 20px; /* بيخلي الزوايا مستديرة */
+  border-color: black; /* لون الحواف */
+  border-style: solid; /* نوع الحواف */
+
+  /****************************************/
+  display: none; /*  يخفي العنصر و بيشيلو من الصفحة */
+  visibility: hidden; /*  يخفي العنصر و بتسيب مكانو فاضي */
+
+  /****************************************/
+  min-width: 150px; /* الحد الادني للعرض */
+  max-width: 200px; /* الحد الاقصي للعرض */
+  min-height: 100px; /* الحد الادني للارتفاع */
+  max-height: 100px; /* الحد الاقصي للارتفاع */
+  width: fit-content; /* يجعل العرض يناسب النص */
+
+  /****************************************/
+  text-overflow: ellipsis; /* لو النص طويل بيختصره و بيحط نقط */
+  text-shadow: 2px 2px 5px rgb(0, 0, 0); /* لون الظل */
+  text-align: center; /* مكان النص */
+  text-decoration: none; /* لو عايز تحط او تشيل الخط الي تحت اللينك */
+  text-transform: capitalize; /* هنا بنعدل الحروف لو عايزها كابتل او سمول */
+  text-indent: 50px; /* المسافه بين اول الكلام و حافه الشاشه  */
+
+  /****************************************/
+  vertical-align: middle; /* مكان الكلام جنب الصورة  */
+  letter-spacing: 2px; /* المسافه بين الكلمات */
+  word-spacing: 1px; /*المسافه بين الحروف*/
+  line-height: 1.6; /* المسافه بين السطور */
+  white-space: nowrap; /* لما السطر يوصل لنهايه مبينزلش تحت و بيكمل في نفس السطؤ */
+  border: inherit; /* الوراثه من العناصر الاخرى*/
+  list-style-type: none; /* لو عايز تشيل النقاط من الليسته */
+
+  /****************************************/
+  font-family: Helvetica, Arial, sans-serif; /* نوع الخط */
+  font-size: 2em; /*حجم الخط مضروب في 2*/
+  font-size: 2vw; /*عرض الشاشه مضروب ف  2*/
+  font-weight: bold; /* سمك الخط */
+  font-style: italic; /* نوع الخط */
+
+  /****************************************/
+  cursor: pointer;
+  float: left; /* علشان تخلي العناصر جنب بعض في نفس الصف  */
+  clear: both; /* لازم تحطها بعد الفلوت علشان العناصر متطلعش برا */
+  width: calc((100% -50px) / 5); /* بتحسب العرض المطلوب حسب عدد العناصر */
+  opacity: 0.1; /* الشفافيه في الكلام و الخلفيه مع بعض  */
+
+  /****************************************/
+  position: relative; /* للتحكم في مكان العنصر  */
+  position: absolute; /* يحدد موضع العنصر بشكل مطلق داخل العنصر الأب وليس وفقًا لتدفق الصفحة العادي */
+  position: fixed; /* علشان تخلي العنصر ثابت في مكانه مهما قلبت  */
+  position: sticky; /* لما تسكرول و توصل ل دي هيفضل معاك */
+  z-index: 4; /* ترتيب الطبقات و كل م زاد الرقم ارتفعت الطبقه */
+
+  /****************************************/
+  counter-increment: counter; /* علشان تعمل عداد اوتوماتيك يعدلك العناصر و بتضيف السطر ده في ال (content: counter(counter);) */
+
+  /***************************************/
+  box-shadow: 0px 0px 20px 0px rgb(255, 255, 255); /* الظل الي ورا العنصر  */
+  box-sizing: border-box; /* تحدد كيفية حساب العرض والارتفاع للعناصر ,border-box: يشمل الحدود والحواف في الحساب ,content-box: يأخذ فقط المحتوى بدون الحواف والحدود */
+
+  /**********************************************************/
+  /*****************        Flex Box         ****************/
+  /**********************************************************/
+  display: flex; /* للتحكم في توزيع العناصر */
+  flex-direction: row-reverse; /* للتحكم في الاتجاه عمودي او افقي منتظم ولا عكسي */
+  flex-wrap: wrap; /* لو عايز تخلي العناصر بعد م تخلص السطر تنزل تحت */
+  flex-flow: row wrap-reverse; /* short hand بتقبل القيمه بتاعت الاتنين الي فوقها */
+  flex-grow: 1; /* يحدد الاولويه في النمو */
+  flex-shrink: 1; /* يحدد الاولويه في الانكماش */
+  flex-basis: 300px; /* الحجم الابتدائي للعنصر */
+  /* flex short hand  */
+  /* flex: [Flex Grow] [Flex Shrink] [Flex Basis]  0 1 auto*/
+  align-items: center; /* يحدد مكان العنصر بشكل طولي*/
+  justify-content: right; /* يحدد مكان العنصر بشكل عرضي*/
+  align-content: flex-start; /* يحدد مكان المحتوى كامل بشكل طولي*/
+  order: 1; /* يحدد ترتيب العنصر */
+  align-self: flex-end; /* يحدد مكان العنصر بشكل طولي و عرضي */
+
+  /************************************************************/
+  /*************************** Filters ***********************/
+  /************************************************************/
+  filter: grayscale(); /* بيخلي الصوره black white */
+  background-image: linear-gradient(
+    90deg,
+    red 20%,
+    blue 40%,
+    blue 60%,
+    black 60%
+  );
+  pointer-events: none; /* لو عايز تلغي الايفنت الي بيحصل لما تدوس ع عنصر */
+  caret-color: blueviolet; /* لون ال text pointer */
+
+  /************************************************************/
+  /***************************   Grid   ***********************/
+  /************************************************************/
+  grid-template-columns: 100px 25% auto repeat(5, 100px); /* علشان تقسم الصفحه لكذا عامود */
+  grid-template-rows: 100px 25% auto repeat(5, 100px); /* علشان تقسم الصفحه لكذا صف */
+  grid-template: 1fr 50px /20% 80%; /* short hand (grid-template: 1fr  50px /20% 80%)  row / col*/
+  row-gap: 10px; /* المسافه بين العناصر عرضي*/
+  column-gap: 10px; /* المسافه بين العناصر طولي  */
+  gap: 10px 10px; /* gap short hand */
+  grid-template-areas:  
+    /* تحديد تخطيط الشبكة باستخدام أسماء المناطق */
+    "nav nav nav nav nav Foot . foot" /* الصف الأول: شريط التنقل (nav) والتذييل (foot) */
+    "cont cont cont cont side side side "; /* الصف الثاني: المحتوى الرئيسي (cont) والشريط الجانبي (side) */
+  grid-area: nav; /* grid-template-areas بنكتب هنا اسم الحاجه الي موجوده في ال  */
+  grid-area: 1/2/4/6; /* short hand لل  (grid-row,grid-column) row/col/row/col */
+  grid-column: span 4; /* بياخد مكان 4 بلوكات بالعرض */
+  grid-row: span 4; /* بياخد مكان 4 بلوكات بالطول */
+  grid-row-start: 1; /* المكان الي هيبدأ منه عرضي */
+  grid-column-start: 1; /* المكان الي هيبدأ منه طولي */
+  /* minmax(200px,500px)  معناها ان اقل حاجه 200px و الماكس 500px*/
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* هيملي المكان الفارغ تلقائي حسب المساحه الموجوده */
+
+  /***************************************************************/
+  /******************    Transfrom and rotation    ***************/
+  /**************************************************************/
+  transform-origin: 50% 50%; /* تحديد نقطة الأصل للتحويلات في وسط العنصر */
+  transform: scaleX(2); /* التمدد افقي */
+  transform: scaleY(2); /* التمدد عمودي */
+  transform: scale(2, 2); /* short hand (X,Y) */
+  rotate: 360deg; /* مقدار الميلان */
+  transform: scale(1.3) /* Zoom */ rotate(5deg);
+  transform: translate(100px, 100px); /* لتحريك العنصر من مكتنه */
+  transform: skewX(5deg); /* انحراف جهة ال X */
+  transform: skewY(5deg); /* انحراف جهة ال Y */
+  transform: skew(5deg, 10deg); /* short hand (X,Y) */
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  /* scaleX() , skewY() ,skewX() , scaleY() , translateX(), translateY() */
+  transform: rotateY(180deg); /* 3D بيلف العنصر افقيا  */
+  transform: rotateX(180deg); /* 3D بيلف العنصر طوليا  */
+  transform: rotateZ(180deg); /* بيلف العنص زي الروتيت العادي */
+  transform: rotate3d(1, 1, 1, 45deg); /* short hand ( X , Y , Z ) */
+
+  /***************************************************************/
+  perspective: 300px; /* Z بيتحط في العنصر الاب علشان احدد البعد */
+  perspective-origin: top right; /* النقطه الي هيتجه ليها لاعنصر او هيبدأ يكبر منين */
+  backface-visibility: hidden; /* يخفي الوجه الخلفي للعنصر عند تدويره */
+  transform-style: preserve-3d; /* يحافظ على التأثيرات ثلاثية الأبعاد داخل العنصر الأب */
+
+  /***************************************/
+  transition-duration: 0.5s; /* الوقت الي بياخد علشان يتحول الشكل */
+  transition-delay: 1s; /* الوقت الي بياخد علشان يتأخر الشكل */
+  transition-property: all; /* الخاصية الي بتتغير */
+  transition-timing-function: linear; /* الشكل الي بيتغير بيه */
+
+  /***************************************************************/
+  /******************           ِAnimation          ***************/
+  /***************************************************************/
+  animation-name: change-color; /* keyframes name */
+  animation-duration: 10s; /* المده الي بيتم بيها الانيماشن */
+  animation-timing-function: linear; /* الشكل الي بيلف بيه بدايته زي نهايته */
+  animation-iteration-count: infinite; /* علشان تخلي العنصر يمعل حركه عدد معين من المرات */
+  animation-direction: alternate; /* اتجاه الانيميشن */
+  animation-delay: 2s; /* الوقت الي بيستناه الشكل قبل م ينز الانيماشن و بيقبل قيمه بالسالب */
+  animation-fill-mode: both; /* (keyframe) بياخد لون اول او اخر لون في ال */
+  animation-play-state: paused; /* بيخلي الانيمشن بقف و غالبا تستخدم في الهوفر */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; *//* short ahnd */
+}
+
+/****************************************************************/
+table {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+table td {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+table th {
+  background-color: rgb(24, 158, 167);
+  padding: 10px;
+  font-weight: bold;
+}
+/***************************************************************|
+/*****************       soudo classes       *******************|
+/***************************************************************|*/
+
+/* اول م الماوس يلمس العنصر الي عليه الهوفر بيحصله الي جوه الهوفر */
+a:hover {
+  color: rgb(255, 53, 53);
+}
+
+/* في الشيك بوكس اول م تعملها صح بيحصل الي جوه */
+.ch:checked {
+  display: none;
+}
+
+/* بيعمل اي حاجه بتطلبها في اللينكات الي زرتها */
+a:visited {
+  color: green;
+}
+
+/* لو في عناصر فاضيه ف الصفحه بيعمل المطلوب */
+div:empty {
+  border: 2px solid beige;
+}
+
+/* TeXt aria */
+.text:focus {
+  border: 2px solid rgb(0, 255, 183);
+  outline: none;
+}
+
+.one::first-letter {
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.two::first-line {
+  background-color: rgba(144, 0, 255, 0.516);
+}
+
+/* الكلام الي متحدد */
+.three::selection {
+  background-color: rgba(0, 0, 255, 0.541);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/* للتحكم في العنصر بعد الشكل */
+.one::after {
+  content: "";
+  background-color: rgb(42, 155, 155);
+  position: absolute;
+  width: 10px;
+  right: 0px;
+  height: 100%;
+  top: 0;
+}
+
+/* للتحكم في العناصر قبل الشكل */
+.one::before {
+  content: "";
+  background-color: #ff000000;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: -29px;
+  top: 35px;
+  border-style: solid;
+  border-color: #00000000 black transparent transparent;
+  border-width: 15px;
+}
+
+/***************************************************************/
+/********************* Media Queries ***************************/
+/***************************************************************/
+/* Phone */
+@media (max-width: 600px) {
+    
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+    
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    
+}
